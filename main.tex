@@ -1,5 +1,6 @@
-\documentclass[a4paper,12pt]{article} % Puedes cambiar el tamaño del papel y la fuente
-
+\documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
+\setcounter{chapter}{0}  % Hace que empiece a contar desde 1
+\renewcommand{\contentsname}{Índice} % Cambia el nombre de la tabla de contenido
 \usepackage[dvipsnames]{xcolor}        % Para cambiar colores
 \usepackage{graphicx}      % Para incluir imágenes
 \usepackage{lipsum}        % Para generar texto de ejemplo
@@ -30,7 +31,7 @@
 \tableofcontents % Índice de contenido (opcional)
 
 \newpage
-\section{Introducción}
+\chapter{\large Introducción}
 \lipsum[1-3] % Generar texto de ejemplo
 
 \end{document}
