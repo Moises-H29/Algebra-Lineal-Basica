@@ -1,11 +1,19 @@
 \documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
-\setcounter{chapter}{0}  % Hace que empiece a contar desde 1
-\renewcommand{\contentsname}{Índice} % Cambia el nombre de la tabla de contenido
+\usepackage[spanish]{babel}  % Idioma español
 \usepackage[dvipsnames]{xcolor}        % Para cambiar colores
-\usepackage{graphicx}      % Para incluir imágenes
 \usepackage{lipsum}        % Para generar texto de ejemplo
 \usepackage{pagecolor}     % Para cambiar el color de fondo
 \usepackage{tikz}                 % Para crear líneas y gráficos
+\usepackage{hyperref} % Crear enlaces dentro del documento
+
+% Opciones de color para los enlaces
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,      % Color de los enlaces
+    urlcolor=blue,
+    filecolor=magenta,
+    citecolor=red
+}
 
 \begin{document}
 
@@ -17,9 +25,19 @@
     \centering
     {\Huge \textbf{Algebra Lineal Básica}} \\[2.5cm] % Título principal
     {\Large Hernandez Pacheco Moises} \\[0.5cm]       % Nombre del autor
-    {\Large Crystal} \\[2.5cm]       % Nombre del autor
-    {\Large Universidad Nacional Autónoma de México} \\[0.5cm]   % Institución o universidad
-    {\Large FES Acatlán} \\[0.5cm]   % Facultad
+    {\Large Crystal} \\[6cm]       % Nombre del autor
+    \color{SkyBlue}
+    {\Large Matemáticas Aplicadas \& Computación} \\[1cm]
+    \color{white}
+    \textbf{\large Universidad Nacional Autónoma de México} \\[0.5cm]   % Institución o universidad
+    \textbf{\large FES Acatlán} \\[1cm]   % Facultad
+    % Dibujar líneas decorativas con TikZ
+    \vfill
+    \begin{tikzpicture}[xscale=3] % Ajustar el escalado de las líneas
+        \draw[white, thick] (-2,0) -- (2,0); % Línea superior
+        \draw[white, thick] (-2,-0.5) -- (2,-0.5); % Línea inferior
+    \end{tikzpicture}
+    
     \vfill
     {\large \today}                              % Fecha actual
 \end{titlepage}
@@ -31,7 +49,17 @@
 \tableofcontents % Índice de contenido (opcional)
 
 \newpage
-\chapter{\large Introducción}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\part{Introducción}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\chapter{Introducción}
 \lipsum[1-3] % Generar texto de ejemplo
 
+% =================== CONTENIDO DEL LIBRO ===================
+\newpage
+\renewcommand{\thechapter}{\Roman{chapter}}
+\part{Conceptos Iniciales}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\chapter{Tipos de Matices}
+\lipsum[1-3] % Generar texto de ejemplo
 \end{document}
