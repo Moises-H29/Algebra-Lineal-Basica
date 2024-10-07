@@ -1,10 +1,15 @@
 \documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
+\usepackage[margin=4cm]{geometry}
 \usepackage[spanish]{babel}  % Idioma español
 \usepackage[dvipsnames]{xcolor}        % Para cambiar colores
 \usepackage{lipsum}        % Para generar texto de ejemplo
 \usepackage{pagecolor}     % Para cambiar el color de fondo
 \usepackage{tikz}                 % Para crear líneas y gráficos
 \usepackage{hyperref} % Crear enlaces dentro del documento
+\usepackage{ragged2e}       % Paquete para alineación flexible
+\usepackage{microtype}
+\setlength{\parindent}{0pt} % quita sangrías
+
 
 % Opciones de color para los enlaces
 \hypersetup{
@@ -25,7 +30,7 @@
     \centering
     {\Huge \textbf{Algebra Lineal Básica}} \\[2.5cm] % Título principal
     {\Large Hernandez Pacheco Moises} \\[0.5cm]       % Nombre del autor
-    {\Large Crystal} \\[6cm]       % Nombre del autor
+    {\Large Ramírez Hernandez Crystal} \\[6cm]       % Nombre del autor
     \color{SkyBlue}
     {\Large Matemáticas Aplicadas \& Computación} \\[1cm]
     \color{white}
@@ -45,7 +50,7 @@
 % Restablecer colores a los predeterminados para el resto del documento
 \pagecolor{white}
 \color{black}
-
+\newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \tableofcontents % Índice de contenido (opcional)
 
 \newpage
@@ -53,7 +58,7 @@
 \part{Introducción}
 \renewcommand{\thechapter}{\arabic{chapter}}
 \chapter{Introducción}
-\lipsum[1-3] % Generar texto de ejemplo
+Hola Mundo
 
 % =================== CONTENIDO DEL LIBRO ===================
 \newpage
