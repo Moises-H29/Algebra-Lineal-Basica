@@ -1,4 +1,5 @@
 \documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
+\usepackage{fancyhdr}  % Para un header chido 
 \usepackage[margin=4cm]{geometry}
 \usepackage[spanish]{babel}  % Idioma español
 \usepackage[dvipsnames]{xcolor}        % Para cambiar colores
@@ -10,6 +11,15 @@
 \usepackage{microtype}
 \usepackage{amsmath} % Para matrices y weas xd
 \setlength{\parindent}{0pt} % quita sangrías
+
+% ============ FOOTER CHIDO ===========
+\pagestyle{fancy}
+\fancyfoot[L]{FES Acatlán}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\hyperlink{toc}{IR AL ÍNDICE}}
+% Añadir una línea horizontal en el footer
+\renewcommand{\footrulewidth}{0.4pt}  % Grosor de la línea
+\renewcommand{\headrulewidth}{0.4pt}  % Grosor de la línea del encabezado
 
 
 
@@ -53,6 +63,7 @@
 \pagecolor{white}
 \color{black}
 \newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\hypertarget{toc}{} % Target al indice
 \tableofcontents % Índice de contenido (opcional)
 
 \newpage
