@@ -8,7 +8,9 @@
 \usepackage{hyperref} % Crear enlaces dentro del documento
 \usepackage{ragged2e}       % Paquete para alineación flexible
 \usepackage{microtype}
+\usepackage{amsmath} % Para matrices y weas xd
 \setlength{\parindent}{0pt} % quita sangrías
+
 
 
 % Opciones de color para los enlaces
@@ -66,5 +68,37 @@ Hola Mundo
 \part{Conceptos Iniciales}
 \renewcommand{\thechapter}{\arabic{chapter}}
 \chapter{Tipos de Matices}
-\lipsum[1-3] % Generar texto de ejemplo
+
+\section{Matriz Cuadrada}
+Es una matriz que consta del mismo número de filas que de columnas.
+En símbolos, es aquella en que \textit{m = n}. Al referirse a una matriz cuadrada de orden \textit{(n,n)}, se dice simplemente que es una \textit{matriz cuadrada de orden \textbf{n}}.\\
+Por ejemplo:
+\\ \\
+\textit{a)}  la matriz \textbf{R} = [7], es una matriz cuadrada de orden 1;\\ \\
+\textit{b)}  la matriz\\ 
+
+\textbf{S} =
+$\begin{bmatrix}
+3 & 1 \\
+-2 & 1
+\end{bmatrix}$
+es una matriz cuadrada de orden 2;\\ \\
+\\\textit{c)}  la matriz\\ 
+
+\textbf{T} =
+$\begin{bmatrix}
+0 & 0 & 0 \\
+1 & 1 & 1 \\
+2 & 2 & 2
+\end{bmatrix}$
+es una matriz cuadrada de orden 3; \\ \\ 
+\\\textit{d)}  una matriz cuadrada de orden \textit{n}, se indica en general por\\ \\
+\textbf{A} =  
+$\begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{bmatrix}$
+
 \end{document}
