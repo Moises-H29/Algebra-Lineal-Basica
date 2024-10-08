@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
 \usepackage{fancyhdr}  % Para un header chido 
-\usepackage[margin=4cm]{geometry}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} % margen por defecto del documento
 \usepackage[spanish]{babel}  % Idioma español
 \usepackage[dvipsnames]{xcolor}        % Para cambiar colores
 \usepackage{lipsum}        % Para generar texto de ejemplo
@@ -18,7 +18,7 @@
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{\hyperlink{toc}{IR AL ÍNDICE}}
 % Añadir una línea horizontal en el footer
-\renewcommand{\footrulewidth}{0.4pt}  % Grosor de la línea
+\renewcommand{\footrulewidth}{0.4pt} % Grosor de la línea
 \renewcommand{\headrulewidth}{0.4pt}  % Grosor de la línea del encabezado
 
 
@@ -33,7 +33,7 @@
 }
 
 \begin{document}
-
+\newgeometry{top=4cm, bottom=4cm, left=4cm, right=4cm}
 % Crear la portada
 \begin{titlepage}
     % Cambiar el fondo a negro y el texto a blanco solo en la portada
@@ -59,10 +59,11 @@
     {\large \today}                              % Fecha actual
 \end{titlepage}
 
+\restoregeometry % cambiar margenes a los iniciales
+
 % Restablecer colores a los predeterminados para el resto del documento
 \pagecolor{white}
 \color{black}
-\newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \hypertarget{toc}{} % Target al indice
 \tableofcontents % Índice de contenido (opcional)
 
@@ -110,8 +111,8 @@ a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{n1} & a_{n2} & \cdots & a_{nn} \\
-\end{bmatrix}$\\
-
+\end{bmatrix}$
+\\
 \section{Matriz Nula}
 Es una matriz en que todos sus elementos son nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]\) es una matriz nula, si cumple que \(a_{ij} = 0\) para todo \(i\) y \(j\).  
 Se las representa con la letra \(\mathbf{O}\).
@@ -140,7 +141,7 @@ $\begin{bmatrix}
 
 \section{Matriz Diagonal}
 
-Es una matriz cuadrada en que los elementos no diagonales son todos nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]_{n\times n}\) es diagonal, si se cumple que \(\mathit{a_{ij}=}\) 0, para todo \(\mathit{i\neq j}\).\\ \\
+Es una matriz cuadrada en que los elementos no diagonales son todos nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]_\mathit{n\times n}\) es diagonal, si se cumple que \(\mathit{a_{ij}=}\) 0, para todo \(\mathit{i\neq j}\).\\ \\
 \textit{Ejemplos:}\\ \\  
 \[
 \begin{aligned}
@@ -162,7 +163,41 @@ Es una matriz cuadrada en que los elementos no diagonales son todos nulos. En s�
 \end{bmatrix}
 \end{aligned}
 \]
-
+\\
+\section{Matriz Escalar}
+Es una matriz \textit{diagonal} en la que todos los elementos son iguales.\\
+En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) es una matriz escalar, si se cumple que:
+\vspace{0.5cm}
+\[
+\mathbf{a} = \begin{cases}
+    \lambda & \text{para } \mathit{i = j} \\
+    0 & \text{para } \mathit{i\neq j}
+    \end{cases}
+\]
+\\ \\
+\textit{Ejemplos:} \\ \\
+\[
+\begin{aligned}
+\mathbf{J} &= \begin{bmatrix}
+    -2 & 0 \\
+    0 & -2
+\end{bmatrix}
+\qquad
+\mathbf{K} &= \begin{bmatrix}
+    \lambda  & 0 & 0 \\
+    0 & \lambda & 0 \\
+    0 & 0 & \lambda
+\end{bmatrix}
+\qquad
+\mathbf{L} &= \begin{bmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{bmatrix}
+\end{aligned}
+\]
+\\ \\
+No se impone ninguna condición particular sobre el valor del número \(\lambda\) puede ser un número natural, entero, racional, real, o complejo.
 
 
 \end{document}
