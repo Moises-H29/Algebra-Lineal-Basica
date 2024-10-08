@@ -12,6 +12,9 @@
 \usepackage{amsmath} % Para matrices y weas xd
 \setlength{\parindent}{0pt} % quita sangrías
 
+% ============ HEADER ===========
+\setlength{\headheight}{16pt} % Aumentar según sea necesario
+
 % ============ FOOTER CHIDO ===========
 \pagestyle{fancy}
 \fancyfoot[L]{FES Acatlán}
@@ -81,6 +84,7 @@ Hola Mundo
 \renewcommand{\thechapter}{\arabic{chapter}}
 \chapter{Tipos de Matices}
 
+% ========== MATRIZ CUADRADA ==========
 \section{Matriz Cuadrada}
 Es una matriz que consta del mismo número de filas que de columnas.
 En símbolos, es aquella en que \textit{m = n}. Al referirse a una matriz cuadrada de orden \textit{(n,n)}, se dice simplemente que es una \textit{matriz cuadrada de orden \textbf{n}}.\\
@@ -113,6 +117,8 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 a_{n1} & a_{n2} & \cdots & a_{nn} \\
 \end{bmatrix}$
 \\
+
+% ========== MATRIZ NULA ==========
 \section{Matriz Nula}
 Es una matriz en que todos sus elementos son nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]\) es una matriz nula, si cumple que \(a_{ij} = 0\) para todo \(i\) y \(j\).  
 Se las representa con la letra \(\mathbf{O}\).
@@ -139,9 +145,10 @@ $\begin{bmatrix}
 0 & 0
 \end{bmatrix}$\\
 
+% ========== MATRIZ DIAGONAL ==========
 \section{Matriz Diagonal}
 
-Es una matriz cuadrada en que los elementos no diagonales son todos nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]_\mathit{n\times n}\) es diagonal, si se cumple que \(\mathit{a_{ij}=}\) 0, para todo \(\mathit{i\neq j}\).\\ \\
+Es una \textit{matriz cuadrada} en que los elementos no diagonales son todos nulos. En símbolos, una matriz \(\mathbf{A} = \left[ a_{ij} \right]_\mathit{n\times n}\) es diagonal, si se cumple que \(\mathit{a_{ij}=}\) 0, para todo \(\mathit{i\neq j}\).\\ \\
 \textit{Ejemplos:}\\ \\  
 \[
 \begin{aligned}
@@ -164,8 +171,10 @@ Es una matriz cuadrada en que los elementos no diagonales son todos nulos. En s�
 \end{aligned}
 \]
 \\
+
+% ========== MATRIZ ESCALAR ==========
 \section{Matriz Escalar}
-Es una matriz \textit{diagonal} en la que todos los elementos son iguales.\\
+Es una \textit{matriz diagonal} en la que todos los elementos son iguales.\\
 En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) es una matriz escalar, si se cumple que:
 \vspace{0.5cm}
 \[
@@ -175,7 +184,7 @@ En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\t
     \end{cases}
 \]
 \\ \\
-\textit{Ejemplos:} \\ \\
+\textit{Ejemplos:} \\ 
 \[
 \begin{aligned}
 \mathbf{J} &= \begin{bmatrix}
@@ -198,6 +207,47 @@ En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\t
 \]
 \\ \\
 No se impone ninguna condición particular sobre el valor del número \(\lambda\) puede ser un número natural, entero, racional, real, o complejo.
+\\
+
+% ========== MATRIZ IDENTIDAD ==========
+\section{Matriz Identidad (o Unidad)}
+Es una \textit{matriz escalar} en que todos sus elementos diagonales son iguales a la unidad.\\
+Se las simboliza con \(\mathbf{I}_\mathit{n}\), en que \textit{n} indica el orden matricial, o simplemente con \textbf{I}. \\ \\
+\textit{Ejemplos:} \\
+\[
+\begin{aligned}
+\mathbf{J} &= \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+\end{bmatrix}
+\qquad
+\mathbf{K} &= \begin{bmatrix}
+    1  & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{bmatrix}
+\qquad
+\mathbf{L} &= \begin{bmatrix}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1
+\end{bmatrix}
+\end{aligned}
+\]
+\\ \\
+En símbolos, se escribe
+\[
+\begin{aligned}
+    \mathbf{I} = \left[\mathit{\mathbf{\delta}_{ij}}\right]
+    \qquad
+    \text{con } \mathbf{\delta}_{ij} &= \begin{cases}
+        1, & \text{si } \mathit{i = j} \\
+        0, & \text{si } \mathit{i\neq j}
+    \end{cases}
+\end{aligned}
+\]
+
 
 
 \end{document}
