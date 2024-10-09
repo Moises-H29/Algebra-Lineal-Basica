@@ -1,4 +1,6 @@
 \documentclass[a4paper,12pt]{report} % Puedes cambiar el tamaño del papel y la fuente
+\usepackage{graphicx} % Para usar \scalebox
+\usepackage{lettrine} % Para formatear texto en mayúsculas
 \usepackage{fancyhdr}  % Para un header chido 
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} % margen por defecto del documento
 \usepackage[spanish]{babel}  % Idioma español
@@ -247,7 +249,58 @@ En símbolos, se escribe
     \end{cases}
 \end{aligned}
 \]
+\\ \\
+En razón de que la letra \textit{i} ya se ha reservado para representar las \textit{filas} de una matriz cualquiera, se acostumbra utilizar el símbolo \(\delta_{ij}\), llamada ``delta de Kronecker", para representar el elemento genérico de la unidad.\\
+N\scalebox{0.8}{OTA}: Esta matriz es muy útil, como base de espacios vectoriales, en la solución de sistemas de ecuaciones lineales, y de problemas de Programación Lineal.
+\\ 
 
+% ========== MATRIZ TRIANGULAR SUPERIOR ==========
+\section{Matriz Triangular Superior}
+Es una matriz en que todos los elementos bajo la diagonal principal son \textbf{nulos}. En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) es triangular superior, si se cumple que \(\mathit{a_{ij}}=0\) para todo \(\mathit{i>j}\).
+\\ \\
+\textit{Ejemplos:} \\ 
 
+\[
+\begin{aligned}
+\mathbf{A} &= \begin{bmatrix}
+    3  & 0 & -1 \\
+    0 & 1 & 0 \\
+    0 & 0 & \text{0.1}
+\end{bmatrix},
+\qquad
+\mathbf{B} &= \begin{bmatrix}
+    3 & -1 & 2 & 0\\
+    0 & -1 & 0 & -5\\
+    0 & 0 & 0 & 6\\
+    0 & 0 & 0 & 2
+\end{bmatrix}
+\end{aligned}
+\]\\ \\
+Note que no se impone ninguna condición sobre los elementos situados en la diagonal principal o por encima de ella; algunos de los elementos \(\mathit{a_{ij}}\), para los que \(\mathit{i\leq j}\) pueden ser también nulos. Ese es el caso de los elementos \(\mathit{b_{14}\text{, }b_{23}\text{ y }b_{33}}\) de la matriz \textbf{B}.
+\\
 
+% ========== MATRIZ TRIANGULAR SUPERIOR ==========
+\section{Matriz Triangular Inferior}
+Es una matriz en que todos los elementos sobre la diagonal principal son \textbf{nulos}. En símbolos, una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) es triangular inferior, si se cumple que \(\mathit{a_{ij}}=0\) para todo \(\mathit{i<j}\).
+\\ \\
+\textit{Ejemplos:} \\ 
+
+\[
+\begin{aligned}
+\mathbf{C} &= \begin{bmatrix}
+    -3 & 0 & 0 \\
+    5 & 1 & 0 \\
+    2 & -2 & 0
+\end{bmatrix},
+\qquad
+\mathbf{D} &= \begin{bmatrix}
+    -3 & 0 & 0 & 0\\
+    5 & -1 & 0 & 0\\
+    2 & -4 & 0 & 0\\
+    -1 & 0 & 7 & 8
+\end{bmatrix}
+\end{aligned}
+\]\\ \\
+Note que algunos de los elementos \(\mathit{a_{ij}}\), para los que \(\mathit{i\geq j}\) pueden ser nulos; no se estipula ninguna condición especial sobre ellos. Ese es el caso de los elementos \(\mathit{d_{33}\text{ y }d_{42}}\) de la matriz \textbf{D}.
+\\
 \end{document}
