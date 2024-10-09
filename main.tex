@@ -250,7 +250,7 @@ En símbolos, se escribe
 \end{aligned}
 \]
 \\ \\
-En razón de que la letra \textit{i} ya se ha reservado para representar las \textit{filas} de una matriz cualquiera, se acostumbra utilizar el símbolo \(\delta_{ij}\), llamada ``delta de Kronecker", para representar el elemento genérico de la unidad.\\
+En razón de que la letra \textit{i} ya se ha reservado para representar las \textit{filas} de una matriz cualquiera, se acostumbra utilizar el símbolo \(\delta_{ij}\), llamada ``delta de Kronecker", para representar el elemento genérico de la unidad.\footnote{En honor al matemático alemán Leopold Kronecker (1823-1891).}\\
 N\scalebox{0.8}{OTA}: Esta matriz es muy útil, como base de espacios vectoriales, en la solución de sistemas de ecuaciones lineales, y de problemas de Programación Lineal.
 \\ 
 
@@ -303,4 +303,67 @@ Es una matriz en que todos los elementos sobre la diagonal principal son \textbf
 \]\\ \\
 Note que algunos de los elementos \(\mathit{a_{ij}}\), para los que \(\mathit{i\geq j}\) pueden ser nulos; no se estipula ninguna condición especial sobre ellos. Ese es el caso de los elementos \(\mathit{d_{33}\text{ y }d_{42}}\) de la matriz \textbf{D}.
 \\
+% ========== MATRIZ SIMETRICA ==========
+\section{Matriz Simétrica}
+Es una matriz \textit{cuadrada} \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) en que \(\mathit{a_{ij}} = \mathit{a_{ji}}\) para todo \textit{i}, \textit{j}.
+\\ \\
+\textit{Ejemplos:} \\ \\
+1) Sea la matriz \(\mathbf{M} = \left[\mathit{m_{ij}}\right]_\mathit{2\times 2}\) siguiente:
+\[
+\mathbf{M} = \begin{bmatrix}
+    -1 & 2\\
+    2 & 1
+\end{bmatrix}
+\]\\ \\
+Esta matriz es simétrica, ya que se cumple la igualdad \(\mathit{m_{12}} = \mathit{m_{21}} = 2\). \\ \\
+2) Sea la matriz \(\mathbf{N} = \left[\mathit{n_{ij}}\right]_\mathit{3\times 3}\) siguiente:
+\[
+\mathbf{N} = \begin{bmatrix}
+    1 & 2 & 1\\
+    2 & 3 & -3\\
+    1 & -3 & 4
+\end{bmatrix}
+\]\\ \\
+Esta matriz es simétrica, ya que se cumplen las igualdades
+\[
+\begin{matrix}
+\mathit{n_{12}} &= \mathit{n_{21}} &= \text{ 2}, \\
+\mathit{n_{13}} & = \mathit{n_{31}} &= \text{ 1}, \\
+\mathit{n_{23}} & = \mathit{n_{32}} &= \text{ -3}
+\end{matrix}
+\]
+\\
+% ========== MATRIZ ANTISIMETRICA ==========
+\section{Matriz Antisimétrica}
+Es una matriz \textit{cuadrada} \(\mathbf{A} = \left[\mathit{a_{ij}}\right]_\mathit{n\times n}\) en que \(\mathit{a_{ij}} = \mathit{-a_{ji}}\) para todo \textit{i} y \textit{j}.
+\\ \\
+\textit{Ejemplos:} \\ \\
+1) Sea la matriz \(\mathbf{Q} = \left[\mathit{q_{ij}}\right]\) de orden dos:
+\[
+\mathbf{Q} = \begin{bmatrix}
+    0 & -1\\
+    1 & 0
+\end{bmatrix}
+\]\\ \\
+Esta matriz es antisimétrica, ya que se cumple la igualdad 
+\[\mathit{q_{21}} = \mathit{-q_{12}}.\] \\ \\
+2) Sea la matriz \(\mathbf{R} = \left[\mathit{r_{ij}}\right]\) de orden tres:
+\[
+\mathbf{N} = \begin{bmatrix}
+    0 & 2 & 1\\
+    -2 & 0 & -3\\
+    -1 & 3 & 0
+\end{bmatrix}
+\]\\ \\
+Esta matriz es antisimétrica, ya que se cumplen las igualdades
+\[
+\begin{matrix}
+\mathit{r_{12}} &= \mathit{-r_{21}},\\
+\mathit{r_{13}} & = \mathit{-r_{31}},\\
+\mathit{r_{23}} & = \mathit{-r_{32}}
+\end{matrix}
+\]
+\\
+Además, la definición de matriz antisimétrica implica que los elementos de su diagonal principal sean nulos.
+
 \end{document}
