@@ -364,6 +364,112 @@ Esta matriz es antisimétrica, ya que se cumplen las igualdades
 \end{matrix}
 \]
 \\
-Además, la definición de matriz antisimétrica implica que los elementos de su diagonal principal sean nulos.
+La definición de matriz antisimétrica implica que los elementos de su diagonal principal sean nulos.\\
+En efecto, de la definición \(\mathit{a_{ij}} = \mathit{-a_{ji}}\) y sumando \(a_{ji}\) a ambos miembros se obtiene que \(\mathit{a_{ij} + a_{ji}} = 0\) y en particular para el caso en que \(\mathit{i=j}\), \(\mathit{a_{ii} + a_{ii}} = 0\), o sea \(2\mathit{a_{ii}} = 0\), y dividiendo ambos miembros por el factor 2, se tiene que \(\mathit{a_{ii}} = 0\).
+\\
+% ========== MATRIZ TRANSPUESTA ==========
+\section{Matriz Transpuesta}
+La transpuesta de una matriz \(\mathbf{A} = \left[\mathit{a_{ij}}\right]\) de orden (\textit{m,n}) es una matriz de orden (\textit{n,m}), que se obtiene intercambiando filas por columnas (o lo que es igual, columnas por filas). El elemento \(\mathit{a_{ij}}\) de la matriz \textbf{A}, ocupa el lugar de \(\mathit{a_{ji}}\) en la matriz transpuesta de \textbf{A}.\\
+Se simboliza la transpuesta de la matriz \textbf{A} por \(\mathbf{A'}\) o por \(\mathbf{A^{t}}\).\\ \\ 
+Si \(\underset{(m,n)}{\mathbf{A}} = \left[\mathit{a_{ij}}\right]\) su transpuesta es \(\underset{(n,m)}{\mathbf{A'}} = \left[\mathit{a_{ji}}\right]\).
+\\ \\ \\
+\textit{Ejemplos:} \\ \\
+\[
+\begin{aligned}
+\underset{(2,3)}{\mathbf{A}} &= \begin{bmatrix}
+    2 & 0 & -1 \\
+    3 & -2 & 4
+\end{bmatrix},
+\qquad
+\underset{(2,2)}{\mathbf{D}} &= \begin{bmatrix}
+    \mathit{d_{11}} & \mathit{d_{12}}\\
+    \mathit{d_{21}} & \mathit{d_{22}} 
+\end{bmatrix}
+\end{aligned}
+\]\\ \\
+\textit{Solución} \\ \\
+\[
+\begin{aligned}
+\underset{(3,2)}{\mathbf{A'}} &= \begin{bmatrix}
+    2 & 3 \\
+    0 & -2 \\
+    -1 & 4 
+\end{bmatrix},
+\qquad
+\underset{(2,2)}{\mathbf{D'}} &= \begin{bmatrix}
+    \mathit{d_{11}} & \mathit{d_{21}}\\
+    \mathit{d_{12}} & \mathit{d_{22}} 
+\end{bmatrix}
+\end{aligned}
+\]\\
+
+% ========== MATRIZ INVERSA ==========
+\section{Matriz Inversa}
+En el conjunto de los números reales, para todo número \(\mathit{a}\neq 0\) existe un número \(\mathit{b}\), llamado inverso multiplicativo (o recíproco), que verifica la propiedad
+\[
+\mathit{a} \cdot \mathit{b} = \mathit{b} \cdot \mathit{a} = 1.
+\]
+Se simboliza ese número \textit{b} por \(\mathit{a^{-1}}\) o por \(\frac{1}{a}\).\\
+Análogamente se plantea la posibilidad de que dada una matriz \textbf{A} cualquiera, existe otra matriz \textbf{B}, conformable con \textbf{A} para la operación de producto, que satisfaga la relación \(\mathbf{A \cdot B = I}\), la relación \(\mathbf{B \cdot A = I}\), o ambas simultáneamente, es decir:
+\[
+\mathbf{A \cdot B = B \cdot A = I},
+\]
+en que \textbf{I} es una \textit{matriz identidad} de orden apropiado. Si esa matriz \textbf{B} existe, diremos que es una inversa multiplicativa de la matriz \textbf{A}, y se la simbolizará por \(\mathbf{A^{-1}}\).
+\\ \\
+\textit{Ejemplo} \\ \\
+Sean las matrices de orden 2:
+\[
+\begin{aligned}
+\mathbf{A} &= \begin{bmatrix}
+    1 & 2 \\
+    3 & 4 
+\end{bmatrix}
+\qquad
+y
+\qquad
+\mathbf{B} &= \begin{bmatrix}
+    -2 & 1 \\
+    3/2 & -1/2
+\end{bmatrix}
+\end{aligned}
+\]\\ \\ 
+Efectuando los productos \(\mathbf{A\cdot B}\) y \(\mathbf{B\cdot A}\), se tiene:\\ \\ 
+\[
+\begin{aligned}
+\mathbf{A\cdot B} &= \begin{bmatrix}
+    1 & 2 \\
+    3 & 4 
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+    -2 & 1 \\
+    3/2 & -1/2
+\end{bmatrix}
+&= \begin{bmatrix}
+    1 & 0 \\
+    0 & 1 
+\end{bmatrix}
+&= \mathbf{I_{2}}
+\end{aligned}
+\]\\
+\[
+\begin{aligned}
+\mathbf{B\cdot A} &= \begin{bmatrix}
+    -2 & 1 \\
+    3/2 & -1/2
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+    1 & 2 \\
+    3 & 4
+\end{bmatrix}
+&= \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+\end{bmatrix}
+&= \mathbf{I_{2}}
+\end{aligned}
+\]\\ \\
+
 
 \end{document}
